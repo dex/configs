@@ -12,7 +12,8 @@ return {
       prefix = "<localleader><localleader>",
       cscope = {
         db_build_cmd_args = { "-bqkvRU" },
-      }
+      },
+      skip_input_prompt = true, -- "true" doesn't ask for input
     },
   },
   {
@@ -24,5 +25,16 @@ return {
       --vim.g.gutentags_file_list_command = "fd -e c -e h"
       -- vim.g.gutentags_trace = 1
     end,
+  },
+  {
+    "smoka7/hop.nvim",
+    version = "*",
+    keys = {
+      { "<leader>hw", "<cmd>HopWordAC<cr>", desc = "Jump to Word after cursor" },
+      { "<leader>hW", "<cmd>HopWordBC<cr>", desc = "Jump to Word before cursor" },
+    },
+    opts = {
+      keys = "etovxqpdygfblzhckisuran",
+    },
   },
 }
