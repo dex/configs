@@ -30,8 +30,8 @@ return {
     "smoka7/hop.nvim",
     version = "*",
     keys = {
-      { "<leader>hw", "<cmd>HopWordAC<cr>", desc = "Jump to Word after cursor" },
-      { "<leader>hW", "<cmd>HopWordBC<cr>", desc = "Jump to Word before cursor" },
+      { "<localleader><localleader>w", "<cmd>HopWordAC<cr>", desc = "Jump to Word after cursor" },
+      { "<localleader><localleader>W", "<cmd>HopWordBC<cr>", desc = "Jump to Word before cursor" },
     },
     opts = {
       keys = "etovxqpdygfblzhckisuran",
