@@ -45,6 +45,7 @@ Plugin 'a.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'Exafunction/codeium.vim'
 "Plugin 'JazzCore/ctrlp-cmatcher'
 "Plugin 'FelikZ/ctrlp-py-matcher'
 Plugin 'nixprime/cpsm'
@@ -57,9 +58,9 @@ Plugin 'rhysd/vim-clang-format'
 Plugin 'DoxygenToolkit.vim'
 " {Auto-completion}
 "Plugin 'Valloric/YouCompleteMe'
-Plugin 'honza/vim-snippets'
-Plugin 'SirVer/ultisnips'
-Plugin 'thiblahute/gobject-snippets'
+"Plugin 'honza/vim-snippets'
+"Plugin 'SirVer/ultisnips'
+"Plugin 'thiblahute/gobject-snippets'
 " {Haskell}
 "Plugin 'bitc/lushtags'
 "Plugin 'lukerandall/haskellmode-vim'
@@ -73,8 +74,8 @@ Plugin 'fatih/vim-go'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-lua-ftplugin'
 " {My Plugin}
-Plugin 'dex/p4.vim'
-Plugin 'dex/vim-slog'
+"Plugin 'dex/p4.vim'
+"Plugin 'dex/vim-slog'
 
 call vundle#end()		"required
 
@@ -205,7 +206,7 @@ function! g:UltiSnips_Complete()
     endif
     return ""
 endfunction
-au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
+"au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsListSnippets="<c-e>"
 set completeopt=longest,menu
