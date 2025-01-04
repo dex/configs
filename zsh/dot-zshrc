@@ -113,6 +113,11 @@ fi
 
 PATH="$PATH:/usr/local/go/bin"
 
+# for Homebrew
+if [ -x /home/linuxbrew/.linuxbrew/bin/brew ]; then
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi
+
 if [ -f .workspace ]; then
     source .workspace
 fi
@@ -120,11 +125,9 @@ fi
 export LIBVIRT_DEFAULT_URI="qemu:///system"
 export NODE_PATH=/usr/local/lib/jsctags/:$NODE_PATH
 
-export SUDO_EDITOR="/home/linuxbrew/.linuxbrew/bin/nvim"
+export EDITOR="$(which nvim)"
 
-# for Homebrew
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
+# for fzf
 source <(fzf --zsh)
 
 export FZF_CTRL_T_OPTS="
@@ -132,7 +135,9 @@ export FZF_CTRL_T_OPTS="
   --preview 'bat -n --color=always {}'
   --bind 'ctrl-/:change-preview-window(down|hidden|)'"
 
-source $HOME/Develop/fzf-git.sh/fzf-git.sh
+if [ -f $HOME/Develop/fzf-git.sh/fzf-git.sh ]; then
+    source $HOME/Develop/fzf-git.sh/fzf-git.sh
+fi
 
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
