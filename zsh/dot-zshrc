@@ -134,7 +134,7 @@ source <(fzf --zsh)
 
 export FZF_CTRL_T_OPTS="
   --walker-skip .git,node_modules,target
-  --preview 'bat -n --color=always {}'
+  --preview 'bat -n --color=always --style=full {}'
   --bind 'ctrl-/:change-preview-window(down|hidden|)'"
 
 if [ -f $HOME/Develop/fzf-git.sh/fzf-git.sh ]; then
