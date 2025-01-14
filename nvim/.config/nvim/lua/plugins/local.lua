@@ -13,7 +13,7 @@ return {
       cscope = {
         qf_window_size = 8,
         skip_picker_for_single_result = true,
-        db_build_cmd = { args = "-bqkvRU" },
+        db_build_cmd = { args = { "-bqkvRU" } },
       },
       skip_input_prompt = true, -- "true" doesn't ask for input
     },
