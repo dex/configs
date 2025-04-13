@@ -4,11 +4,9 @@ return {
         event = "VeryLazy",
         version = false, -- Never set this value to "*"! Never!
         opts = {
-            provider = "claude",
+            provider = "claude-haiku",
             claude = {
                 api_key_name = "cmd:cat /home/dex/.anthropic-api-key",
-                model = "claude-3-5-haiku-20241022",
-                max_tokens = 8192,
             },
             --provider = "ollama",
             ollama = {
