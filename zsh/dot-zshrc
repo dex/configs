@@ -130,7 +130,9 @@ export NODE_PATH=/usr/local/lib/jsctags/:$NODE_PATH
 export EDITOR="$(which nvim)"
 
 # for fzf
-source <(fzf --zsh)
+if which fzf >/dev/null; then
+    source <(fzf --zsh)
+fi
 
 export FZF_CTRL_T_OPTS="
   --walker-skip .git,node_modules,target
