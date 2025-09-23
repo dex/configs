@@ -4,7 +4,7 @@ return {
     dependencies = {
       "nvim-telescope/telescope.nvim", -- optional [for picker="telescope"]
       "ibhagwan/fzf-lua", -- optional [for picker="fzf-lua"]
-      "echasnovski/mini.pick", -- optional [for picker="mini-pick"]
+      "nvim-mini/mini.pick", -- optional [for picker="mini-pick"]
     },
     opts = {
       -- USE EMPTY FOR DEFAULT OPTIONS
