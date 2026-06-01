@@ -1,0 +1,7 @@
+font-family = Monaco Nerd Font
+font-size = 14
+theme = iTerm2 Solarized Dark
+window-width = 80
+window-height = 24
+cursor-style = block
+shell-integration-features = no-cursor
